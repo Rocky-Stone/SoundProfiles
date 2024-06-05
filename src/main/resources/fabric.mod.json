@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "soundprofiles",
+	"version": "${version}",
+	"name": "Sound Profiles",
+	"description": "A client mod that adds sound profiles activated with keybindings!",
+	"authors": [
+		"Rocky_Stone"
+	],
+	"contact": {
+		"sources": "https://github.com/Rocky-Stone/SoundProfiles/tree/1.20.4"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sound-profiles/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"net.rockystone.soundprofiles.SoundProfilesClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+
+	}
+}
