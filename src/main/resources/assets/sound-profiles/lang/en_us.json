@@ -1,8 +1,0 @@
-{
-  "category.soundprofiles.keybinds": "SoundProfiles",
-
-  "key.soundprofiles.normal_volume": "Normal Volume Profile",
-  "key.soundprofiles.quiet_volume": "Quiet Volume Profile",
-  "key.soundprofiles.full_volume": "Full Volume Profile",
-  "key.soundprofiles.custom_volume": "Custom Volume Profile"
-}

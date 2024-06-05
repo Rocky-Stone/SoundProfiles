@@ -1,0 +1,32 @@
+{
+  "category.soundprofiles.keybindings": "Sound Profiles",
+
+  "key.soundprofiles.normal_volume": "Normal Volume",
+  "key.soundprofiles.quiet_volume": "Quiet Volume",
+  "key.soundprofiles.full_volume": "Full Volume",
+  "key.soundprofiles.custom_volume": "Custom Volume",
+  "key.soundprofiles.config": "Config",
+
+
+
+
+  "config_category.soundprofiles.custom_profile": "Custom Profile",
+  "config_category.soundprofiles.full_profile": "Full Profile",
+  "config_category.soundprofiles.normal_profile": "Normal Profile",
+  "config_category.soundprofiles.quiet_profile": "Quiet Profile",
+
+  "config_option.soundprofiles.master_volume": "Master Volume",
+  "config_option.soundprofiles.hostile_volume": "Hostile Mob Volume",
+  "config_option.soundprofiles.ambient_volume": "Ambient Volume",
+  "config_option.soundprofiles.blocks_volume": "Blocks Volume",
+  "config_option.soundprofiles.music_volume": "Music Volume",
+  "config_option.soundprofiles.neutral_volume": "Passive Mob Volume",
+  "config_option.soundprofiles.players_volume": "Players Volume",
+  "config_option.soundprofiles.records_volume": "Records Volume",
+  "config_option.soundprofiles.voice_volume": "Voice Volume (what does this do, I have no idea...)",
+  "config_option.soundprofiles.weather_volume": "Weather Volume",
+
+  "config_tooltip.learningmod.tooltip": "A value from 0.0 to 1.0 (0% to 100%",
+
+  "config.soundprofiles.config_title": "SoundProfiles Config"
+}
