@@ -1,4 +1,5 @@
 Post 0.2.0:
+
 -There are four profiles currently: normal, quiet, full, and custom.
 
 -They are all technically custom, so use them however.
