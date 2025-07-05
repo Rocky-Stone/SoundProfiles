@@ -59,22 +59,22 @@ public class SoundProfilesClient implements ClientModInitializer {
 
             while (normalVolumeKeyBind.wasPressed()) {
                 SoundProfiles.normalSoundProfile.applyProfile(client);
-                client.player.sendMessage(Text.literal("Normal profile loaded"));
+                client.player.sendMessage(Text.literal("Normal profile loaded"), true);
             }
 
             while (quietVolumeKeyBind.wasPressed()) {
                 SoundProfiles.quietSoundProfile.applyProfile(client);
-                client.player.sendMessage(Text.literal("Quiet profile loaded"));
+                client.player.sendMessage(Text.literal("Quiet profile loaded"), true);
             }
 
             while (fullVolumeKeyBind.wasPressed()) {
                 SoundProfiles.fullSoundProfile.applyProfile(client);
-                client.player.sendMessage(Text.literal("Full profile loaded"));
+                client.player.sendMessage(Text.literal("Full profile loaded"), true);
             }
 
             while (customVolumeKeyBind.wasPressed()) {
                 SoundProfiles.customSoundProfile.applyProfile(client);
-                client.player.sendMessage(Text.literal("Custom profile loaded"));
+                client.player.sendMessage(Text.literal("Custom profile loaded"), true);
             }
 
             while (configKeyBind.wasPressed()) {
