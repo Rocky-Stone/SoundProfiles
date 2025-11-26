@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.rockystone.soundprofiles.util.config.cloth.SoundProfilesConfigScreen;
 import net.rockystone.soundprofiles.util.sound.SoundProfiles;
 import org.lwjgl.glfw.GLFW;
@@ -39,12 +40,14 @@ public class SoundProfilesClient implements ClientModInitializer {
 
     public void setKeyBindings() {
         LOGGER.info("SoundProfilesClient.setKeyBindings() was called");
+        KeyBinding.Category category = KeyBinding.Category.create(Identifier.of("soundprofiles", "keybindings"));
 
-        normalVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.normal_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_7, "category.soundprofiles.keybindings"));
-        quietVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.quiet_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_8, "category.soundprofiles.keybindings"));
-        fullVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.full_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_9, "category.soundprofiles.keybindings"));
-        customVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.custom_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_5, "category.soundprofiles.keybindings"));
-        configKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.config", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_2, "category.soundprofiles.keybindings"));
+        normalVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.normal_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_7, category));
+        quietVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.quiet_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_8, category));
+        fullVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.full_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_9, category));
+        customVolumeKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.custom_volume", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_5, category));
+        configKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.soundprofiles.config", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_KP_2, category));
+
     }
 
     public void registerEvents() {
@@ -57,27 +60,27 @@ public class SoundProfilesClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
 
-            while (normalVolumeKeyBind.wasPressed()) {
+            while (normalVolumeKeyBind.wasPressed() && client.player != null) {
                 SoundProfiles.normalSoundProfile.applyProfile(client);
                 client.player.sendMessage(Text.literal("Normal profile loaded"), true);
             }
 
-            while (quietVolumeKeyBind.wasPressed()) {
+            while (quietVolumeKeyBind.wasPressed() && client.player != null) {
                 SoundProfiles.quietSoundProfile.applyProfile(client);
                 client.player.sendMessage(Text.literal("Quiet profile loaded"), true);
             }
 
-            while (fullVolumeKeyBind.wasPressed()) {
+            while (fullVolumeKeyBind.wasPressed() && client.player != null) {
                 SoundProfiles.fullSoundProfile.applyProfile(client);
                 client.player.sendMessage(Text.literal("Full profile loaded"), true);
             }
 
-            while (customVolumeKeyBind.wasPressed()) {
+            while (customVolumeKeyBind.wasPressed() && client.player != null) {
                 SoundProfiles.customSoundProfile.applyProfile(client);
                 client.player.sendMessage(Text.literal("Custom profile loaded"), true);
             }
 
-            while (configKeyBind.wasPressed()) {
+            while (configKeyBind.wasPressed() && client.player != null) {
                 SoundProfilesConfigScreen.start();
             }
 

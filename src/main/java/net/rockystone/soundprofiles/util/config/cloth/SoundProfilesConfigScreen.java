@@ -66,61 +66,61 @@ public class SoundProfilesConfigScreen {
     private static void addEntries(ConfigCategory category, ConfigEntryBuilder entryBuilder, List<Double> volumes, Double defaultValue) {
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.master_volume"), volumes.get(0))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(0, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.hostile_volume"), volumes.get(1))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(1, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.ambient_volume"), volumes.get(2))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(2, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.blocks_volume"), volumes.get(3))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(3, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.music_volume"), volumes.get(4))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(4, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.neutral_volume"), volumes.get(5))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(5, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.players_volume"), volumes.get(6))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(6, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.records_volume"), volumes.get(7))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(7, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.voice_volume"), volumes.get(8))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(8, newValue)) //Called when user save the config
                 .build());
 
         category.addEntry(entryBuilder.startDoubleField(Text.translatable("config_option.soundprofiles.weather_volume"), volumes.get(9))
                 .setDefaultValue(defaultValue) //Used when user click "Reset"
-                .setTooltip(Text.translatable("config_tooltip.learningmod.tooltip"))
+                .setTooltip(Text.translatable("config_tooltip.soundprofiles.tooltip"))
                 .setSaveConsumer(newValue -> volumes.set(9, newValue)) //Called when user save the config
                 .build());
     }

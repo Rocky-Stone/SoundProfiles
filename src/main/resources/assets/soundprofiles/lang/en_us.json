@@ -1,5 +1,5 @@
 {
-  "category.soundprofiles.keybindings": "Sound Profiles",
+  "key.category.soundprofiles.keybindings": "Sound Profiles",
 
   "key.soundprofiles.normal_volume": "Normal Volume",
   "key.soundprofiles.quiet_volume": "Quiet Volume",
@@ -26,7 +26,7 @@
   "config_option.soundprofiles.voice_volume": "Voice Volume (what does this do, I have no idea...)",
   "config_option.soundprofiles.weather_volume": "Weather Volume",
 
-  "config_tooltip.learningmod.tooltip": "A value from 0.0 to 1.0 (0% to 100%",
+  "config_tooltip.soundprofiles.tooltip": "A value from 0.0 to 1.0 (0% to 100%)",
 
   "config.soundprofiles.config_title": "SoundProfiles Config"
 }
